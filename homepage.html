@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HOME</title>
+    <link rel="stylesheet" href="mystyle.css"> 
+    <link rel="index" href="index.html"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+</head>
+
+<style>
+    body, html {
+        height: 100%;
+        margin: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .hero-text {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #FFC470;
+        z-index: 2; /* Ensures the text is on top of the video */
+    }
+
+    body {
+        background-color: transparent; /* Set background of body */
+        position: relative;
+    }
+
+    /* Navbar styling */
+    .navbar {
+        position: relative; /* Make sure the navbar is positioned relatively */
+        z-index: 3; /* Ensure the navbar is above the video */
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for navbar */
+        padding: 10px;
+        text-align: center;
+    }
+
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        padding: 14px 20px;
+        margin: 0 10px;
+    }
+
+    .navbar a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .dropdown {
+        display: inline-block;
+    }
+
+    .dropbtn {
+        color: white;
+        background-color: #333;
+        padding: 14px 20px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #333;
+        min-width: 160px;
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    /* Video styling */
+    #myVideo {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures the video covers the screen while maintaining aspect ratio */
+        z-index: 1; /* Ensure the video is behind the content */
+    }
+
+
+#clock 
+{
+    font-family: 'Arial', sans-serif;
+    font-size: 38px;
+    color: #333;
+    text-align: center;
+    padding: 10px;
+    background-color: #FFE6A9;
+    border: 1px solid #ccc;
+    width: 250px;
+    border-radius: 10px;
+    position: fixed; 
+    bottom: 50px;    
+    right: 30px;     
+    z-index: 1; 
+}
+
+footer
+{
+   position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%; /* Makes the footer full width */
+            background-color: #333; /* Dark background */
+            color: white; /* White text */
+            text-align: center; /* Center the text */
+            padding: 1px; /* Padding around the footer */
+            font-size: 12px; /* Font size */
+z-index: 1;
+}
+</style>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <div class="navbar">
+            <span style='font-size:40px;'>&#9925;</span>
+            <a href="homepage.html">Home</a>
+            <a href="index.html#me">About Me</a>
+            <a href="index.html#fam">Family</a>
+            <a href="index.html#edu">Education</a>
+            <a href="index.html#expe">Experience</a>
+            <div class="dropdown">
+                <button class="dropbtn">Gallery 
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="index.html#fwens">Friends</a>
+                    <a href="index.html#meow">Cats</a>
+                    <a href="index.html#yum">Foods</a>
+                </div>
+               </div>
+            <a href="index.html#soc">Contact</a>
+        </div>
+</div>
+    </header>
+
+    <!-- Hero Text -->
+    <div class="hero-text">
+        <h1 style="font-size:130px">Hello and Welcome</h1>
+        <p style="font-size:30px" >Feel free to explore and get to know me better. Thanks for visiting!</p>
+    </div>
+
+    <!-- Video -->
+    <video autoplay muted loop id="myVideo">
+        <source src="vid2.mp4" type="video/mp4">
+    </video>
+
+<div id="clock"></div>
+
+<footer>
+<p>&copy; 2024 Idayu.com All rights reserved.</p>
+</footer>
+
+ <script>
+        function updateClock() {
+            var now = new Date();
+            var hours = now.getHours().toString().padStart(2, '0');
+            var minutes = now.getMinutes().toString().padStart(2, '0');
+            var seconds = now.getSeconds().toString().padStart(2, '0');
+            
+            var timeString = hours + ':' + minutes + ':' + seconds;
+            document.getElementById('clock').textContent = timeString;
+        }
+        
+        // Update the clock every second
+        setInterval(updateClock, 1000);
+        
+        // Initial call to display the time immediately
+        updateClock();
+    </script>
+</body>
+</html>

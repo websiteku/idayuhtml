@@ -1,0 +1,477 @@
+<style>
+
+body
+{
+  font-family: "Amatic SC", sans-serif;
+}
+
+body
+{
+ background-image: url("cloud.png")
+}
+
+.w3-card-4
+{
+  justify-content: center;
+  background-color: #FFE6A9;
+  width: 350px;
+}
+
+.li ul li
+{
+  text-align: left;
+}
+
+.li ul li::marker
+{
+ content: "⪩⪨";
+}
+
+.marquee
+{
+  font-size: 20px;
+  background-color: #FFE6A9;
+}
+
+.audio
+{
+  border: 3px solid #825B32; 
+  border-radius: 10px; 
+  background-color: #825B32;
+  padding: 10px; 
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.section
+{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 100px;
+  float: right;
+  width: 325px;
+  margin: 20px;
+}
+
+.explain
+{
+ width: 100%;
+}
+
+mini
+{
+  float: right;
+  width: 50%;
+}
+.navbar 
+{
+  overflow: hidden;
+  background-color: #102C57;
+}
+
+.navbar a 
+{
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  width: 14.28%; /* seven links of equal widths */
+  text-decoration: none;
+}
+
+.dropdown 
+{
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn 
+{
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn
+{
+  background-color: #03346E;
+
+}
+
+.dropdown-content 
+{
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a 
+{
+  float: none;
+  color: black;
+  padding: 12 px-16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover 
+{
+  background-color: #98DED9;
+  width: 100%;
+}
+
+.dropdown:hover .dropdown-content
+ {
+  display: block;
+}
+
+.skills 
+{
+   border: 2px solid #333; /* Adds a border around the skills */
+   background-color: #FFE6A9; /* Sets the background color */
+   padding: 20px; /* Adds some padding inside the box */
+   width: 100%; /* Make the container full width */
+   margin: 0 auto; /* Centers the container */
+   border-radius: 10px; /* Adds rounded corners */
+   text-align: center; /* Centers the text */
+   box-sizing: border-box; /* Ensures padding is included in the total width */
+}
+
+h2 
+{
+   margin: 0; /* Remove default margin */
+   padding: 10px; /* Add padding around h2 */
+   background-color: #E88D67; /* Dark background for h2 */
+   color: black; /* White text color for the header */
+   border-radius: 5px; /* Rounded corners for the header */
+}
+
+      
+.skill-list 
+{
+    list-style-type: none; /* Removes the default list bullets */
+    padding: 0; /* Removes default padding */
+}
+
+.skill-list li 
+{
+    font-size: 1.2em; /* Increases font size */
+    padding: 5px 0; /* Adds padding for each skill */
+}
+
+        
+.skill-list li:nth-child(even) 
+{
+    background-color: #FFCFB3; /* Alternate background color for even items */
+}
+
+.fa-star 
+{
+    color: gray; /* Default unfilled stars (gray) */
+}
+
+.fa-star.checked 
+{
+    color: gold; /* Filled stars (gold) */
+}
+
+.rating 
+{
+    font-size: 1.5em;
+}
+
+.h1
+{
+  font-family: arial;
+  font-size: 2px;
+}
+
+h3
+{
+  width: 100%;
+  background-color:#605EA1;
+  font-style: italic;
+}
+
+.avatar 
+{
+  vertical-align: middle;
+  width: 250px;
+  height: 250px;
+  padding: 20px;
+  border-radius: 50%;
+}
+
+table, th, td 
+{
+  border: 3px double black;
+  border-collapse: collapse;
+  padding: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #ADD8E6;
+}
+
+
+table.center
+{
+  margin-left: auto; 
+  margin-right: auto;
+  width: 80%;
+}
+
+
+th
+{
+  background-color: #E88D67;
+  color: black;
+  font-size: 1.1em;
+}
+
+
+tr:nth-child(even)
+{
+  background-color: green;
+}
+
+tr, td:hover
+{
+  background-color: #825B32;
+  cursor: pointer;
+}
+    
+
+td 
+{
+  font-size: 1em;
+  background-color: #FFE6A9; 
+}
+
+table 
+{
+  border-radius: 8px;
+}
+
+.container
+{
+  border: 2px solid #ccc;
+  background-color: #FFE6A9;
+  border-radius: 0px;
+  padding: 16px;
+  margin: 16px 0
+}
+
+.container::after
+{
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container img 
+{
+  float: left;
+  width: 550px; 
+  height: 150px;
+  margin-right: 30px;
+  border-radius: 5%;
+}
+
+.container span
+{
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+@media (max-width: 500px) 
+{
+
+.container
+{
+  text-align: center;
+}
+
+.container img 
+{
+  margin: auto;
+  float: none;
+  display: block;
+}
+}
+
+aside 
+{
+  float: right;
+  width: 30%;
+}
+
+* 
+{
+  box-sizing: border-box;
+  
+}
+
+body 
+{
+  padding: 20px;
+  font-family: Arial;
+}
+
+.row 
+{
+  margin: 16px;
+}
+
+.row > .column 
+{
+  padding: 10px;
+}
+
+
+.column 
+{
+  float:left;
+  width: 20%;
+  display: none; 
+  margin: 10px;
+}
+
+.row:after 
+{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: #825B32;
+  padding: 15px;
+  margin: 5px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+.button {
+  padding: 15px 25px;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #ffF;
+  background-color: #4A628A;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover 
+{
+background-color: #C62E2E
+}
+
+.button:active
+{
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+footer
+{
+  background-color: #102C57;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 100%px;
+  bottom: 0;
+  left: 0;
+}
+
+.contact-container
+{
+   width: 90%;
+   margin: 50px;
+   padding: 20px;
+   background-color:#102C57;
+   border-radius: 8px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+       
+h2
+{
+   text-align: center;
+   color: black;
+}
+        
+input, textarea 
+{
+   width: 100%;
+   padding: 10px;
+   margin: 20px 0;
+   border-radius: 4px;
+   border: 1px solid #ccc;
+   box-sizing: border-box;
+}
+        
+.submit 
+{
+   width: 100%;
+   padding: 10px;
+   background-color: #4CAF50;
+   color: white;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+}
+        
+.submit:hover 
+{
+   background-color: #825B32;
+}
+        
+.message 
+{
+   color: green;
+   text-align: center;
+   display: none;
+
+}
+.socmed
+{
+    text-align: center;
+    margin-top: 20px;   
+}
+        
+.socmed a 
+{
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+}
+        
+.socmed a:hover 
+{
+    color: #4CAF50;
+}
+
+
+</style>
+</div>
+</body>
